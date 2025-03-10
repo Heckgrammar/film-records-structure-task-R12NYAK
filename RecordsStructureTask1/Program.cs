@@ -32,8 +32,27 @@
             // Produce one output to say the name of the newest film
 
             // Write the code to update the andMan record to show the film is currently being shown
+            Film newestMovie = filmCollection[0];
+            foreach (Film film in filmCollection)
+            {
+                if (film.year > newestMovie.year)
+                {
+                    newestMovie = film;
+                }
 
+            }
+
+            Console.WriteLine($"The newest film is :{newestMovie.title}");
+
+            for (int i = 0; i < filmCollection.Length; i++)
+            {
+                filmCollection[i].beingShown = true;
+                Console.WriteLine("Ant man is being shown in cinemas yay!!");
+            }
 
         }
     }
 }
+
+
+        
